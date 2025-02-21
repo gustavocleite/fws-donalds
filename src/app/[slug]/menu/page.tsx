@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 import { db } from "../../../lib/prisma";
+import RestaurantCategories from "./components/categories";
 import RestaurantHeader from "./components/header";
 
 interface RestaurantMenuPageProps {
@@ -33,11 +34,12 @@ const RestaurantMenuPage = async ({
   if (!restaurant) {
     return notFound();
   }
-  return <RestaurantHeader restaurant={restaurant} />;
-  // <div>
-  //   <RestaurantHeader restaurant={restaurant} />
-  //   <RestaurantCategories restaurant={restaurant} />
-  // </div>
+  return (
+    <div>
+      <RestaurantHeader restaurant={restaurant} />
+      <RestaurantCategories restaurant={restaurant} />
+    </div>
+  );
 };
 
 export default RestaurantMenuPage;
