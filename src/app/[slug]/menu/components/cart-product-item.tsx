@@ -16,7 +16,7 @@ const CartProductItem = ({ product }: CartItemProps) => {
     return ( 
         <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-                    {/* ESQUERDA  */}
+                {/* ESQUERDA  */}
                 <div className="relative h-20 w-20 bg-gray-100 rounded-xl">
                     <Image src={product.imageUrl} alt={product.name} fill />
                 </div>
@@ -34,12 +34,14 @@ const CartProductItem = ({ product }: CartItemProps) => {
                         </Button>
                     </div>
                 </div>
-                <Button className="h-7 w-7 rounded-lg" variant="outline" onClick={() => removeProduct(product.id)}>
-                    <TrashIcon/>
-                </Button>
             </div>
+            {/* BOTÃO DE REMOVER NO FINAL */}
+            <Button className="h-7 w-7 rounded-lg ml-auto" variant="outline" onClick={() => removeProduct(product.id)}>
+                <TrashIcon/>
+            </Button>
         </div>
     );
+    
 }
 
 export default CartProductItem;
