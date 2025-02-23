@@ -5,6 +5,7 @@ import React from "react";
 
 import { db } from "@/lib/prisma";
 
+import ProductDetails from "./components/product-details";
 import ProductHeader from "./components/product-header";
 
 
@@ -34,7 +35,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
     return (
       <div className="flex h-full flex-col">
         <ProductHeader product={product} />
-
+        <ProductDetails product={product}/>
       </div>
     );
   };
