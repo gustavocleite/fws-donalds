@@ -1,11 +1,11 @@
+import { ChevronLeft, ChevronRightIcon, TrashIcon } from "lucide-react";
 import Image from "next/image";
 import React, { useContext } from "react";
 
+import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/helpers/format-currency";
 
 import { CartContext, CartProduct } from "../contexts/cart";
-import { ChevronLeft, ChevronRightIcon, TrashIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 interface CartItemProps {
     product: CartProduct
